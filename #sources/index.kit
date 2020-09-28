@@ -5,12 +5,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Document</title>
 		<link rel="stylesheet" href="fonts/stylesheet.css">
-		<link rel="stylesheet" href="style/style.css">
+		<link rel="stylesheet" href="css/style.css">
 	</head>
 	<body>
 		<header class="header">
-			<div class="header__container container">
-				<div class="header__nav">
+			<div class="header__nav">
+				<div class="container header__container">
 					<span class="nav-phone phone">+7 499 322-85-80</span>
 					<nav class="menu">
 						<a href="" class="menu__link">Как мы работаем</a>
@@ -21,17 +21,24 @@
 					</nav>
 					<button class="header__btn btn-modal">Перезвоните мне</button>
 				</div>
-				<div class="header__content">
+			</div>
+			<div class="header__nav_bottom_line"></div>
+			<div class="header__content">
+				<div class="container header__container">
 					<div class="logo">
-						<img src="макет/logo.png" alt="logo">
+						<img src="img/logo.png" alt="logo">
 					</div>
 					<p class="header__subtitle">Ваш личный юрист всегда на связи</p>
 					<span class="content-phone phone">+7 499 322-85-80</span>
 					<div class="header__network">
-						<img id="android-icon" src="макет/icons/android.svg" alt="android">
-						<img id="apple-icon" src="макет/icons/apple.svg" alt="apple">
+						<div class="android-icon">
+							<img src="img/icons/android.svg" alt="">
+						</div>
+						<div class="apple-icon">
+							<img src="img/icons/apple.svg" alt="">
+						</div>
 					</div>
-				</div>
+				</div>	
 			</div>
 		</header>
 	</body>
