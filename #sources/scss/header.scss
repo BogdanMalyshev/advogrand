@@ -1,0 +1,143 @@
+@mixin btn ($height, $width, $bg) {
+	height: $height;
+	width: $width;
+
+	color: white;
+	background: $bg;
+	border-radius: 5px;
+
+	&:hover{
+		background: darken($color: $bg, $amount: 10%);
+	}
+}
+
+@mixin flex ($dir, $jus, $ali) {
+	display: flex;
+	flex-direction: $dir;
+	justify-content: $jus;
+	align-items: $ali;
+}
+
+@mixin flex_space_bettwen {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+
+
+
+$gradient_btn:linear-gradient(top #c20b0b #e42626);
+
+*{
+	font-family: Proxima Nova, sans-serif;
+}
+
+.container{
+	max-width: 1000px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.header__container {
+	@include flex_space_bettwen;
+}
+
+.phone {
+	font-weight: bold;
+}
+
+.header {
+	&__nav {
+		padding: 10px 0 0 0;
+		position: fixed;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		background: white;
+		z-index: 20;
+
+		.nav-phone {
+			font-size: 14px;
+			font-weight: bold;
+		}
+
+		.menu {
+			width: 50%;
+			height: 30px;
+			@include flex_space_bettwen;
+			align-items: center;
+
+			&__link{
+				font-size: 14px;
+				font-weight: 400;
+				color:black;
+				height: 70%;
+				&:hover{
+					border-bottom: #c91111 2px solid;
+				}
+			}
+		}
+
+		.btn-modal {
+			@include btn(30px,140px,#c91111);
+			font-size: 12px;
+			font-weight: bold;
+		}
+		.header__nav_bottom_line{
+			margin-top: 10px;
+			height: 1px;
+			width: 100%;
+			background-color:#eeeeee;
+		}
+	}
+	
+
+	&__content {
+		padding: 10px 0 10px 0;
+		margin-top: 60px;
+
+		.online {
+			@include flex(row, flex-end,center);
+			width: 70%;
+		}
+
+		.header__subtitle {
+			font-size: 14px;
+			font-weight: 400;
+			margin-right: 20%;
+		}
+
+		.header__network {
+			@include flex_space_bettwen;
+			.android-icon,.apple-icon {
+				width: 40px;
+				height: 40px;
+
+				border:solid 1px #e42626;
+				border-radius: 5px;
+				margin:0 5px 0 5px;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: 0.1s;
+				cursor: pointer;
+				&:hover {
+					transform: scale(1.1);
+				}
+
+				img{
+					height: 60%;
+					width: 60%;
+				}
+			}
+		}
+
+		.content-phone {
+			font-size: 18px;
+			margin-right: 4%;
+		}
+	}
+}
