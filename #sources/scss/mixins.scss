@@ -1,0 +1,72 @@
+@mixin btn ($height, $width, $bg) {
+	height: $height;
+	width: $width;
+
+	color: white;
+	background: $bg;
+	border-radius: 5px;
+
+	&:hover{
+		background: darken($color: $bg, $amount: 10%);
+	}
+}
+
+@mixin gradient_btn ($height, $width, $bg) {
+	height: $height;
+	width: $width;
+
+	color: white;
+	background: $bg;
+	border-radius: 5px;
+}
+
+@mixin efect_btn ($height, $width, $bg, $fsp, $fw,$color) {
+    height: $height;
+    width: $width;
+    background: $bg;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+    span{
+        position: absolute;
+        left: -100%;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.288);
+        z-index: 1;
+        transition: 0.2s;
+    }
+    #text-button{
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 5;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        p{
+            font-size: $fsp;
+            font-weight: $fw;
+            color:$color;
+        }
+    }
+    &:hover span{
+        left: 0;
+    }
+}
+
+@mixin flex ($dir, $jus, $ali) {
+	display: flex;
+	flex-direction: $dir;
+	justify-content: $jus;
+	align-items: $ali;
+}
+
+@mixin flex_space_bettwen {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
