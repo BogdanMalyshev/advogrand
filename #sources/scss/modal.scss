@@ -1,0 +1,39 @@
+.modal{
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20;
+
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+    &.active{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
+    &__block{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        padding: 50px;
+        background-color: white;
+    }
+    &__content{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+    }
+    &__close{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height: 25px;
+        width: 25px;
+        font-size: 20px;
+        font-weight: 500;
+        background: rgba(0, 0, 0, 0);
+    }
+}
