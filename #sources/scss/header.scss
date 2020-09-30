@@ -47,7 +47,7 @@
 		}
 
 		.btn-modal {
-			@include btn(30px,140px,#c91111);
+			@include btn(30px,140px,$btnColorRed);
 			font-size: 12px;
 			font-weight: bold;
 		}

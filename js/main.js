@@ -16,7 +16,7 @@ const servicesLink = document.querySelectorAll(".list-services__link"),
 function modalShow (content){
     modal.classList.add('active');
     modalContent.innerHTML= `${content}`;
-    bodyScroll.classList.add('hide');
+    // bodyScroll.classList.add('hide');
 
 };
 
@@ -25,7 +25,7 @@ function modalHide (){
         window.addEventListener('click', (e)=>{
             if(e.target == element || e.target == modal){
             modal.classList.remove('active');
-            bodyScroll.classList.remove('hide');
+            // bodyScroll.classList.remove('hide');
             }
         });
     });
