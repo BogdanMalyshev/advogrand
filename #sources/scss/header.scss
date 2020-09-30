@@ -1,9 +1,4 @@
 
-
-*{
-	font-family: Proxima Nova, sans-serif;
-}
-
 .container{
 	max-width: 1000px;
 	width: 100%;
@@ -42,7 +37,7 @@
 
 			&__link{
 				font-size: 14px;
-				font-weight: 400;
+				font-weight: 500;
 				color:black;
 				height: 70%;
 				&:hover{
@@ -76,7 +71,7 @@
 
 		.header__subtitle {
 			font-size: 14px;
-			font-weight: 400;
+			font-weight: 500;
 			margin-right: 20%;
 		}
 
