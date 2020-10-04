@@ -1,10 +1,4 @@
 
-.container{
-	max-width: 1000px;
-	width: 100%;
-	margin: 0 auto;
-}
-
 .header__container {
 	@include flex_space_bettwen;
 }
@@ -30,7 +24,7 @@
 		}
 
 		.menu {
-			width: 50%;
+			width: 70%;
 			height: 30px;
 			@include flex_space_bettwen;
 			align-items: center;

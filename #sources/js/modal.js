@@ -13,7 +13,6 @@ const servicesLink = document.querySelectorAll(".list-services__link"),
 function modalShow (content){
     modal.classList.add('active');
     modalContent.innerHTML= `${content}`;
-    // bodyScroll.classList.add('hide');
 
 };
 
@@ -27,8 +26,6 @@ function modalHide (){
         });
     });
 };
-
-
 
 //-------------------------------------------logics-modal-------------------------------------------
 

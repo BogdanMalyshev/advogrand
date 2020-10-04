@@ -1,9 +1,13 @@
-$gradient_btn:linear-gradient(0deg, #c20b0b, #f52929);
 
 .top-fs {
     position: relative;
     height: 95vh;
     width: 100%;
+    &__container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
     img {
         position: absolute;
         width: 100%;
