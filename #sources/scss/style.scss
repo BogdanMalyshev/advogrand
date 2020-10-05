@@ -7,9 +7,17 @@ $gradient_btn:linear-gradient(0deg, #c20b0b, #f52929);
 *{
     font-family: 'Exo 2', sans-serif;
 }
-html{
+::-webkit-scrollbar { /* chrome based */
+    width: 0px;  /* ширина scrollbar'a */
+    background: transparent;  /* опционально */
+}
+
+html {
+    -ms-overflow-style: none;  /* IE 10+ */
+    scrollbar-width: none; /* Firefox */
     scroll-behavior: smooth;
 }
+
 .container{
 	max-width: 1000px;
     width: 100%;
@@ -26,13 +34,17 @@ html{
 @import "mixins.scss";
 @import "nullstyle.scss";
 @import "header.scss";
+@import "modal.scss";
 @import "fullscreen.scss";
 @import "specialty.scss";
 @import "about.scss";
 @import "question.scss";
 @import "advantages.scss";
-@import "modal.scss";
 @import "slider.scss";
+@import "tarrifs.scss";
+@import "contacts.scss";
+@import "footer.scss";
+
 
 
 

@@ -6,11 +6,12 @@ const btnLeft = document.querySelector('.slider__btn-left'),
     slides = document.querySelector('.slider__slides'),
     slide = document.querySelectorAll('.slider__slide');
 
-let src = [];
+let src = [],
+    inner =[];
 
 slide.forEach((e, i) => {
     src[i] = e.children[0].src;
-    console.log(e.children[0].src);
+    inner[i] = e.children[1].outerHTML;
     e.remove();
 });
 
@@ -22,7 +23,7 @@ let offset = 0;
 src.forEach(() => {
     let div = document.createElement('div');
     div.classList.add('slider__slide');
-    div.innerHTML = `<img src="${src[step]}" alt="">`;
+    div.innerHTML = `<img src="${src[step]}">${inner[step]}`;
     div.style.left = offset * 220 + 'px';
     slides.append(div);
     if (step == src.length - 1) {
@@ -31,7 +32,7 @@ src.forEach(() => {
         step++;
     }
 
-    if (offset != 7) {
+    if (offset != 6) {
         offset++;
     }
 });
@@ -41,7 +42,7 @@ src.forEach(() => {
 function drawLeft() {
     let div = document.createElement('div');
     div.classList.add('slider__slide');
-    div.innerHTML = `<img src="${src[step]}" alt="">`;
+    div.innerHTML = `<img src="${src[step]}">${inner[step]}`;
     div.style.left = offset * 220 + 'px';
     slides.append(div);
     if (step == src.length - 1) {
@@ -49,7 +50,6 @@ function drawLeft() {
     } else {
         step++;
     }
-    console.log(step);
 };
 
 
@@ -61,11 +61,9 @@ function drawRight() {
     }
     let div = document.createElement('div');
     div.classList.add('slider__slide');
-    div.innerHTML = `<img src="${src[step]}" alt="">`;
+    div.innerHTML = `<img src="${src[step]}">${inner[step]}`;
     div.style.left = '-220px';
     slides.prepend(div);
-
-    console.log(step);
 };
 
 
@@ -80,7 +78,7 @@ function left (){
         slide2[0].remove();
         drawLeft();
         btnRight.onclick = left;
-    }, 500);
+    }, 300);
 
 
 };
@@ -96,7 +94,7 @@ function right() {
             slide2[slide2.length - 1].remove();
             setTimeout(() => {
                 btnLeft.onclick = right;
-            }, 490);
+            }, 290);
         
     }, 10);
 }
