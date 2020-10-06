@@ -1,0 +1,156 @@
+@media (max-width: 1000px){
+    .slider__slides{
+        width: 660px;
+    }
+}
+@media (max-width: 800px){
+    .header__nav .menu{
+        display: none;
+    }
+    .advantages__card{
+        min-width: 33.3%;
+    }
+    .advantages__cards{
+        width: 100%;
+    }
+    .header__subtitle{
+        display: none;
+    }
+    .top-fs__titles{
+        width: 70%;
+    }
+    .top-fs__title{
+        font-size: 30px;
+    }
+    .top-fs__subtitle{
+        font-size: 20px;
+    }
+    .top-fs__text{
+        p{
+            font-size: 18px;
+        }
+    }
+    .title{
+        font-size: 24px;
+    }
+    .tarrifs__titles h1{
+        font-size: 24px;
+    }
+    .specialty{
+        padding: 20px 0 20px 0;
+        min-height: 750px;
+        height: auto;
+        .list-services{
+            justify-content: space-around;
+        }
+    }
+    .advantages__content{
+        display: flex;
+        flex-direction: column;
+        .advantages__clients{
+            margin: 0 auto;
+            margin-top: 20px;
+            width: 80%;
+        }
+    }
+    .slider__slides{
+        width: 440px;
+    }
+    .tarrifs__cards{
+        flex-direction: column;
+        align-items: center;
+    }
+    .tarrifs__card{
+        img{
+            width: 100%;
+        }
+    }
+    .contacts__white-block{
+        display: none;
+    }
+    .contacts__container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .contacts__form{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            button{
+                width: 300px;
+            }
+        }
+        .contacts__information{
+            width: 90%;
+        }
+    } 
+}
+
+@media (max-width: 600px){
+    .header__container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .header__content .online{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        .content-phone{
+            margin: 20px;
+        }
+        .header__network{
+            margin: 20px;
+        }
+    }
+    .top-fs__titles{
+        width: 100%;
+        h3{
+            width: 100%;
+            text-align: center;
+        }
+        h1{
+            width: 100%;
+            text-align: center;
+        }
+    }
+    .top-fs__text{
+        width: 100%;
+        text-align: center;
+    }
+    .top-fs__button{
+        width: 100%;
+        text-align: center;
+    }
+    .slider__slides{
+        width: 220px;
+    }
+    .tarrifs__card{
+        width: 70%;
+        margin-top: 30px;
+    }
+    .about{
+        height: auto;
+        min-height: 700px;
+        padding: 20px 0 20px 0;
+    }
+    .about__card{
+        h1{
+            font-size: 30px;
+            margin-top: 15px;
+        }
+    }
+    .footer__container{
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 370px){
+    .advantages{
+        display: none;
+    }
+    .about{
+        min-height: 900px;
+    }
+}

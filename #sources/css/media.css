@@ -1,0 +1,5 @@
+@media (max-width: 1000px) {
+  .slider__slides {
+    width: 660px;
+  }
+}

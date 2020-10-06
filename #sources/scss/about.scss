@@ -60,12 +60,14 @@
         display: flex;
         justify-content: space-around;
         margin-top: 10vh;
+        flex-wrap: wrap;
     }
 
     &__card{
         display: flex;
         flex-direction: column;
         align-items: center;
+        min-width: 180px;
 
         h1{
             font-size: 48px;

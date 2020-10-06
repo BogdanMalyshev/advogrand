@@ -1,6 +1,7 @@
 
 .header__container {
 	@include flex_space_bettwen;
+	padding:0 20px 0 20px;
 }
 
 .phone {

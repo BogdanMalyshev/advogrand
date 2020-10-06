@@ -12,7 +12,13 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        height: 300px;
+        min-height: 300px;
+    }
+    &__cards{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: 100%;
     }
     &__card{
         height: 100%;

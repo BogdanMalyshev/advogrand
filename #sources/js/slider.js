@@ -39,7 +39,7 @@ src.forEach(() => {
 
 
 
-function drawLeft() {
+function addElementLeft() {
     let div = document.createElement('div');
     div.classList.add('slider__slide');
     div.innerHTML = `<img src="${src[step]}">${inner[step]}`;
@@ -53,7 +53,7 @@ function drawLeft() {
 };
 
 
-function drawRight() {
+function addElementRight() {
     if (step == 0) {
         step = src.length - 1;
     } else {
@@ -71,30 +71,30 @@ function drawRight() {
 function left (){
     btnRight.onclick = null;
     let slide2 = document.querySelectorAll('.slider__slide');
-    slide2.forEach((e, i) => {
-        e.style.left = i * 220 - 220 + 'px';
+    slide2.forEach(e => {
+        e.style.transform = `translate(${Number(e.style.transform.slice(10, -3)) - 220}px)`;
     });
     setTimeout(() => {
         slide2[0].remove();
-        drawLeft();
+        addElementLeft();
         btnRight.onclick = left;
-    }, 300);
+    }, 520);
 
 
 };
 
 function right() {
     btnLeft.onclick = null;
-    drawRight();
+    addElementRight();
     setTimeout(() => {
             let slide2 = document.querySelectorAll('.slider__slide');
-            slide2.forEach((e, i) => {
-                e.style.left = i * 220 + 'px';
+            slide2.forEach(e => {
+                e.style.transform = `translate(${Number(e.style.transform.slice(10, -3)) + 220}px)`;
             });
             slide2[slide2.length - 1].remove();
             setTimeout(() => {
                 btnLeft.onclick = right;
-            }, 290);
+            }, 510);
         
     }, 10);
 }
